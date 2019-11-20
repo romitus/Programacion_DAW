@@ -5,21 +5,24 @@ import java.util.Scanner;
 public class Ejercicio1 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Por favor, introduzca la altura (número impar mayor o igual a 5):");
+        System.out.println("Escriba la altura de los calcetines");
+
         int altura = teclado.nextInt();
-        if (altura >= 5 && altura % 2 !=0 ){
-            for (int y = 0; y < altura; y++) {
-                for (int x = 0; x < 6; x++) {
-                    if (y==0 || y == altura / 2 || y == altura -1|| x== 0 || x== 5){
-                        System.out.print("M");
-                    }else {
-                        System.out.print(" ");
-                    }
+
+        while (altura < 4){
+            System.out.print("Numero incorrecto, el numero ha de ser mayor o igual que 4");
+            System.out.println(); //Salto de linea necesario para que sea mas intuitivo para el usuario
+            altura = teclado.nextInt();
+        }
+        for (int y = 0; y < altura; y++) {
+            for (int x = 0; x < 14; x++) {
+                if (x < 3 || (x > 7 && x < 11 ) || (y == altura -2 && x < 6) || (y == altura -1 && x < 6) || (y == altura -2 && x > 7) || (y == altura -1 && x > 7)){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
                 }
-                System.out.println();
             }
-        }else{
-            System.out.println("La altura introducida no es correcta");
+            System.out.println();
         }
     }
 }

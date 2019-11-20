@@ -5,16 +5,33 @@ import java.util.Scanner;
 public class Ejercicio5 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        String cad1 = teclado.nextLine();
-        String vocales = "aeiou";
-        int numVocal = 0;
-        for (int i = 1; i <= cad1.length(); i++) {
-            for (int j = 1; j <= vocales.length(); j++) {
-                if (vocales.substring(j-1, j).equalsIgnoreCase(cad1.substring(i-1, i))){
-                    numVocal = numVocal + 1;
-                }
+        System.out.println("Introduce la hora");
+        int horas = teclado.nextInt();
+        System.out.println("Introduce los minutos");
+        int minutos = teclado.nextInt();
+        System.out.println("Introduce los segundos");
+        int segundos = teclado.nextInt();
+        System.out.println("Introduce los segundos a aumentar");
+        int segundosAumentar = teclado.nextInt();
+
+        System.out.println("Aumentando la hora...");
+        for (int i = 0; i < segundosAumentar; i++) {
+            segundos = segundos + 1;
+            if (segundos > 59){
+                segundos = 0;
+                minutos = minutos + 1;
             }
+            if (minutos > 59){
+                minutos = 0;
+                horas = horas + 1;
+            }
+            if (horas > 23){
+                horas = 0;
+                minutos = 0;
+                segundos = 0;
+            }
+            System.out.println(horas+":"+minutos+":"+segundos);
         }
-        System.out.println("La cantidad de vocales es " + numVocal);
+
     }
 }

@@ -5,17 +5,28 @@ import java.util.Scanner;
 public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduzca un numero entero:");
-        long num1 = teclado.nextLong();
-        String numeroIntroducido = String.valueOf(num1);
-        String digitos = "0123456789";
-        System.out.print("Dígitos que aparecen en el número: ");
-        for (int i = 1; i <= numeroIntroducido.length() ; i++) {
-            for (int j = 1; j <= digitos.length(); j++) {
-                if (digitos.substring(j-1,j).equals(numeroIntroducido.substring(i-1,i))){
 
-                }
+        int contador = 0;
+
+        System.out.println("Introduzca su numero favorito 1:");
+        Integer favorito1 = teclado.nextInt();
+        System.out.println("Introduzca su numero favorito 2:");
+        Integer favorito2 = teclado.nextInt();
+        System.out.println("Introduzca su numero favorito 3:");
+        Integer favorito3 = teclado.nextInt();
+        teclado.nextLine();
+        System.out.println("Introduzca el numero de la loteria:");
+        String numeroLoteria = teclado.nextLine();
+
+        for (int i = 1; i <= 5; i++) {
+            if (numeroLoteria.substring(i-1, i).equals(favorito1.toString()) || numeroLoteria.substring(i-1, i).equals(favorito2.toString()) || numeroLoteria.substring(i-1, i).equals(favorito3.toString())){
+                contador++;
             }
+        }
+        if (contador > 2){
+            System.out.println("Ese numero le va a dar suerte");
+        } else {
+            System.out.println("Ese numero no le va a dar suerte");
         }
     }
 }
