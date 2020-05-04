@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hangar>
+    <avion id="1">
+        <modelo>Piper PA-31T Cheyenne</modelo>
+        <year>1969</year>
+    </avion>
+    <avion id="2">
+        <modelo>Piper PA-28 Cherokee</modelo>
+        <year>1960</year>
+    </avion>
+    <avion id="3">
+        <modelo>Piper M600</modelo>
+        <year>1979</year>
+    </avion>
+</hangar>
