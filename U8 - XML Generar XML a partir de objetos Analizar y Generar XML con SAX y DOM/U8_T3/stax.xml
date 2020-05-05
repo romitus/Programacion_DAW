@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hangar>
+	<avion id="1">
+		<avion>Boeing 747</avion>
+		<year>1969</year>
+	</avion>
+	<avion id="2">
+		<avion>A380</avion>
+		<year>2007</year>
+	</avion>
+	<avion id="3">
+		<avion>MAX 737</avion>
+		<year>2016</year>
+	</avion>
+	<avion id="4">
+		<avion>37 Viggen</avion>
+		<year>1971</year>
+	</avion>
+	<avion id="5">
+		<avion>Eurofighter Typhoon</avion>
+		<year>2003</year>
+	</avion>
+	<avion id="6">
+		<avion>Lockheed Martin F-22 Raptor</avion>
+		<year>2005</year>
+	</avion>
+	<avion id="7">
+		<avion>P-51 Mustang</avion>
+		<year>1942</year>
+	</avion>
+	<avion id="8">
+		<avion>McDonnell Douglas F/A-18 Hornet</avion>
+		<year>1978</year>
+	</avion>
+	<avion id="9">
+		<avion>Learjet 60</avion>
+		<year>1993</year>
+	</avion>
+	<avion id="10">
+		<avion>Cessna Citation Sovereign+</avion>
+		<year>2004</year>
+	</avion>
+</hangar>
